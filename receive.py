@@ -21,6 +21,7 @@ def fibo(n):
             r.set(i, int(r.get(i-1)) + int(r.get(i-2)))
     return int(r.get(n))
 
+
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 queue = 'rpc_queue'
